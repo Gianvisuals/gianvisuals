@@ -92,4 +92,575 @@
     <!-- Navbar -->
     <nav class="fixed w-full z-40 bg-background/90 backdrop-blur-md border-b border-white/10 top-[33px]">
         <div class="max-w-[1200px] mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
-            <a href="#" onclick="showHome()" class="text-xl font-bold font-display tracking-t
+            <a href="#" onclick="showHome()" class="text-xl font-bold font-display tracking-tighter uppercase flex items-center gap-1 cursor-pointer">
+                GIANVISUALS
+            </a>
+            <div class="flex gap-6 text-sm font-medium">
+                <a href="#bundles" onclick="goToSection('bundles'); return false;" class="text-white hover:text-accent transition-colors font-bold">PACKS</a>
+                <a href="#academy" onclick="goToSection('academy'); return false;" class="text-gray-400 hover:text-white transition-colors">ACADEMY</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== VISTA PRINCIPAL (HOME) ==================== -->
+    <div id="home-view" class="view-section active">
+        <!-- Hero Section -->
+        <header class="pt-40 pb-16 px-4 md:px-8 max-w-[1200px] mx-auto min-h-[60vh] flex flex-col justify-center items-center text-center relative overflow-hidden">
+            <!-- Degradado / Glow de Fondo -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px] pointer-events-none"></div>
+            
+            <div class="relative z-10 inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] tracking-widest uppercase mb-6 text-accent">
+                <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span> Assets & Formación
+            </div>
+
+            <h1 class="relative z-10 text-5xl md:text-7xl font-bold font-display mb-6 uppercase text-white leading-[0.95] tracking-tight">
+                Domina el arte de<br>
+                la <span class="text-accent">Edición.</span>
+            </h1>
+            <p class="relative z-10 text-lg text-gray-400 max-w-xl mb-10 leading-relaxed">
+                Herramientas profesionales y cursos avanzados para editores de video, streamers y creadores de contenido.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 relative z-10">
+                <a href="#bundles" class="bg-accent text-black px-10 py-4 font-bold font-display text-lg rounded hover:bg-white transition-all transform hover:scale-105 shadow-[0_0_30px_rgba(204,255,0,0.3)] w-full sm:w-auto">
+                    VER PACKS
+                </a>
+                <a href="#academy" class="bg-surface border border-white/20 text-white px-10 py-4 font-bold font-display text-lg rounded hover:bg-white/10 transition-all w-full sm:w-auto">
+                    VER CURSOS
+                </a>
+            </div>
+        </header>
+
+        <!-- SECCIÓN: SHOWREEL / TRAILER -->
+        <section class="py-12 px-4 md:px-8 max-w-[1200px] mx-auto border-b border-white/10">
+            <div class="rounded-2xl overflow-hidden border border-white/10 relative group shadow-2xl bg-surface">
+                <div class="absolute inset-0 bg-accent/5 pointer-events-none group-hover:bg-accent/10 transition-colors z-10"></div>
+                <!-- Placeholder de YouTube -->
+                <div class="relative pb-[56.25%] h-0">
+                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&controls=1&mute=1&rel=0" title="Gianvisuals Showreel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="flex justify-between items-center mt-6">
+                <div>
+                    <h3 class="text-xl font-display font-bold text-white">Showreel 2024</h3>
+                    <p class="text-sm text-gray-500">Mira lo que puedes lograr con nuestros assets.</p>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-accent uppercase tracking-widest font-bold">
+                    <i data-lucide="play-circle" class="w-4 h-4"></i> Watch Now
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: ACADEMY (CURSOS - Link Externo) -->
+        <section id="academy" class="py-24 px-4 md:px-8 max-w-[1200px] mx-auto border-b border-white/10">
+            <div class="flex items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-4xl font-display font-bold uppercase mb-2">Gianvisuals <span class="text-accent">Academy</span></h2>
+                    <p class="text-gray-400 max-w-md">Formación profesional alojada en plataforma segura. Acceso de por vida.</p>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-green-400 border border-green-900/50 bg-green-900/10 px-3 py-1 rounded-full">
+                    <i data-lucide="lock" class="w-3 h-3"></i> Plataforma Segura (Hotmart)
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Curso 1 -->
+                <div class="group relative rounded-2xl overflow-hidden border border-white/10 bg-surface h-[400px]">
+                    <img src="https://i.ibb.co/qFYSXFg6/Gemini-Generated-Image-jjw7hhjjw7hhjjw7.png" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <div class="flex gap-2 mb-3">
+                            <span class="bg-accent text-black text-[10px] font-bold px-2 py-1 rounded uppercase">Nivel: Iniciante</span>
+                            <span class="bg-white/10 text-white text-[10px] font-bold px-2 py-1 rounded uppercase backdrop-blur">4 Horas</span>
+                        </div>
+                        <h3 class="text-3xl font-display font-bold text-white mb-2">Edición Viral para Redes</h3>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Aprende a crear Reels y Tiktoks dinámicos que retienen la audiencia. Subtítulos, ritmo y efectos.</p>
+                        <div class="flex items-center justify-between border-t border-white/10 pt-4">
+                            <span class="text-2xl font-bold">$29.000</span>
+                            <!-- Enlace directo a Hotmart/Plataforma externa -->
+                            <a href="https://hotmart.com/es" target="_blank" class="bg-white text-black px-6 py-2 rounded font-bold text-sm flex items-center gap-2 hover:bg-accent transition-colors">
+                                INSCRIBIRSE <i data-lucide="external-link" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 2 -->
+                <div class="group relative rounded-2xl overflow-hidden border border-white/10 bg-surface h-[400px]">
+                    <img src="https://images.unsplash.com/photo-1579109652910-99b9be06aaec?q=80&w=687&auto=format&fit=crop" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <div class="flex gap-2 mb-3">
+                            <span class="bg-purple-500 text-white text-[10px] font-bold px-2 py-1 rounded uppercase">Nivel: Avanzado</span>
+                            <span class="bg-white/10 text-white text-[10px] font-bold px-2 py-1 rounded uppercase backdrop-blur">6 Horas</span>
+                        </div>
+                        <h3 class="text-3xl font-display font-bold text-white mb-2">Master en Premiere Pro</h3>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Domina el flujo de trabajo profesional. Atajos de teclado, proxies, color grading y exportación eficiente.</p>
+                        <div class="flex items-center justify-between border-t border-white/10 pt-4">
+                            <span class="text-2xl font-bold">$49.900</span>
+                            <!-- Enlace directo a Hotmart/Plataforma externa -->
+                            <a href="https://hotmart.com/es" target="_blank" class="bg-white text-black px-6 py-2 rounded font-bold text-sm flex items-center gap-2 hover:bg-accent transition-colors">
+                                INSCRIBIRSE <i data-lucide="external-link" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: TIENDA DE PACKS -->
+        <section id="bundles" class="py-24 px-4 md:px-8 max-w-[1200px] mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-12 gap-6">
+                <div>
+                    <h2 class="text-3xl font-display font-bold uppercase">Herramientas & Assets</h2>
+                    <p class="text-sm text-gray-400 mt-1">Potencia tu flujo de trabajo al instante.</p>
+                </div>
+                <div class="flex gap-2 overflow-x-auto no-scrollbar w-full md:w-auto">
+                    <button onclick="filterProducts('all')" class="filter-btn active px-4 py-1 rounded text-xs font-bold border border-white/20 hover:border-accent transition-colors whitespace-nowrap">TODO</button>
+                    <button onclick="filterProducts('bundle')" class="filter-btn px-4 py-1 rounded text-xs font-bold border border-white/20 hover:border-accent transition-colors whitespace-nowrap">PACKS</button>
+                    <button onclick="filterProducts('sfx')" class="filter-btn px-4 py-1 rounded text-xs font-bold border border-white/20 hover:border-accent transition-colors whitespace-nowrap">AUDIO</button>
+                    <button onclick="filterProducts('luts')" class="filter-btn px-4 py-1 rounded text-xs font-bold border border-white/20 hover:border-accent transition-colors whitespace-nowrap">COLOR</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid-container">
+                <!-- JS Injection -->
+            </div>
+        </section>
+
+        <!-- SECCIÓN NUEVA: MÉTODOS DE PAGO -->
+        <section class="py-12 border-t border-white/10 bg-surface/50">
+            <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="credit-card" class="w-8 h-8 text-white"></i>
+                        <div class="text-left">
+                            <p class="text-xs font-bold text-white uppercase tracking-wider">Tarjetas</p>
+                            <p class="text-[10px] text-gray-400">Crédito y Débito</p>
+                        </div>
+                    </div>
+                    <div class="h-8 w-px bg-white/10 hidden md:block"></div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-blue-500 rounded flex items-center justify-center text-white font-bold text-xs">MP</div>
+                        <div class="text-left">
+                            <p class="text-xs font-bold text-white uppercase tracking-wider">Mercado Pago</p>
+                            <p class="text-[10px] text-gray-400">Dinero en cuenta</p>
+                        </div>
+                    </div>
+                    <div class="h-8 w-px bg-white/10 hidden md:block"></div>
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="banknote" class="w-8 h-8 text-white"></i>
+                        <div class="text-left">
+                            <p class="text-xs font-bold text-white uppercase tracking-wider">Efectivo</p>
+                            <p class="text-[10px] text-gray-400">Rapipago / PagoFácil</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t border-white/10 pt-12 pb-6 text-center bg-surface">
+            <h2 class="text-2xl font-display font-bold text-white mb-2 tracking-tighter">GIANVISUALS</h2>
+            <p class="text-gray-500 text-xs mb-8">Elevando el estándar de la edición en Latam.</p>
+            <div class="flex justify-center gap-6 text-xs text-gray-400 mb-8">
+                <a href="#" class="hover:text-white">Instagram</a>
+                <a href="#" class="hover:text-white">YouTube</a>
+                <a href="#" class="hover:text-white">Soporte</a>
+            </div>
+            <p class="text-[10px] text-gray-600">&copy; 2024 Gianvisuals. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <!-- ==================== VISTA DE PRODUCTO (LANDING) ==================== -->
+    <div id="product-view" class="view-section pt-24 pb-20">
+        <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+            <button onclick="showHome()" class="mb-8 flex items-center gap-2 text-gray-400 hover:text-white transition-colors group">
+                <i data-lucide="arrow-left" class="w-4 h-4 group-hover:-translate-x-1 transition-transform"></i> Volver
+            </button>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+                <div class="relative rounded-2xl overflow-hidden border border-white/10 aspect-square lg:aspect-auto h-auto lg:h-[600px] group">
+                    <img id="p-image" src="" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+
+                <div class="flex flex-col justify-center">
+                    <div id="p-category" class="inline-block px-3 py-1 mb-4 border border-accent text-accent text-xs font-bold uppercase tracking-widest rounded-full w-fit">CATEGORY</div>
+                    <h1 id="p-title" class="text-4xl md:text-6xl font-display font-bold uppercase mb-2 leading-[0.9]">Product Title</h1>
+                    <p id="p-subtitle" class="text-xl text-gray-400 mb-6 font-light">The subtitle goes here</p>
+                    
+                    <div class="flex items-end gap-4 mb-8">
+                        <span id="p-price" class="text-4xl font-bold text-white">$29.000</span>
+                        <span id="p-old-price" class="text-xl text-gray-500 line-through mb-1 hidden">$58.000</span>
+                        <span id="p-discount" class="bg-accent text-black text-xs font-bold px-2 py-1 rounded mb-2 hidden">50% OFF</span>
+                    </div>
+
+                    <a id="p-btn" href="#" target="_blank" class="bg-accent hover:bg-white text-black text-center font-bold text-lg py-4 px-8 rounded transition-all shadow-[0_0_20px_rgba(204,255,0,0.2)] hover:shadow-[0_0_30px_rgba(204,255,0,0.4)] mb-8 flex items-center justify-center gap-2">
+                        COMPRAR AHORA <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                    </a>
+                    
+                    <p class="text-center text-xs text-gray-500 mb-8 flex items-center justify-center gap-2">
+                        <i data-lucide="shield-check" class="w-4 h-4"></i> Compra segura vía MercadoPago • Entrega Inmediata
+                    </p>
+
+                    <div class="bg-surface border border-white/10 rounded-xl p-6">
+                        <h3 class="font-bold text-white mb-4 uppercase tracking-wider text-sm">¿Qué incluye?</h3>
+                        <ul id="p-features" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN SLIDER: Solo aparecerá para ID 5 (LUTs) -->
+            <div id="product-slider-section" class="hidden mb-20 border-t border-b border-white/10 py-16 bg-surface">
+                <div class="text-center mb-8">
+                    <p class="text-accent text-xs font-bold uppercase tracking-widest mb-2">Color Grade Pro</p>
+                    <h2 class="text-3xl font-display font-bold text-white">Antes vs Después</h2>
+                    <p class="text-gray-400 mt-2 max-w-lg mx-auto text-sm">Desliza para ver la diferencia real en footage plano (LOG).</p>
+                </div>
+                <div class="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden border border-white/20 shadow-2xl group cursor-col-resize select-none" id="slider-container">
+                    <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop" class="comparison-image absolute inset-0 w-full h-full object-cover" alt="After Color Grade">
+                    <span class="absolute top-4 right-4 bg-black/60 backdrop-blur px-3 py-1 rounded text-xs font-bold border border-white/10 z-10 pointer-events-none">AFTER</span>
+                    <div id="overlay-img" class="absolute inset-0 w-full h-full">
+                        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop" class="comparison-image img-before w-full h-full object-cover" alt="Before Color Grade">
+                        <span class="absolute top-4 left-4 bg-black/60 backdrop-blur px-3 py-1 rounded text-xs font-bold border border-white/10 pointer-events-none">BEFORE (LOG)</span>
+                    </div>
+                    <div class="slider-divider" id="slider-line" style="left: 50%"></div>
+                    <div class="slider-handle shadow-lg" id="slider-handle" style="left: 50%">
+                        <i data-lucide="chevrons-left-right" class="w-5 h-5 text-black"></i>
+                    </div>
+                    <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-col-resize z-30 m-0 p-0" id="slider-input" oninput="updateSlider(this.value)">
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-16 mb-20">
+                <h2 class="text-3xl font-display font-bold uppercase mb-8 text-center">Detalles</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-surface p-8 rounded-xl border border-white/5 text-center">
+                        <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-4 text-accent"><i data-lucide="monitor" class="w-6 h-6"></i></div>
+                        <h4 class="font-bold mb-2">Universal</h4>
+                        <p class="text-sm text-gray-400">Archivos estándar de la industria compatibles con todos los editores.</p>
+                    </div>
+                    <div class="bg-surface p-8 rounded-xl border border-white/5 text-center">
+                        <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-4 text-accent"><i data-lucide="download-cloud" class="w-6 h-6"></i></div>
+                        <h4 class="font-bold mb-2">Descarga Digital</h4>
+                        <p class="text-sm text-gray-400">Recibe el link de Google Drive inmediatamente después del pago.</p>
+                    </div>
+                    <div class="bg-surface p-8 rounded-xl border border-white/5 text-center">
+                        <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-4 text-accent"><i data-lucide="infinity" class="w-6 h-6"></i></div>
+                        <h4 class="font-bold mb-2">Uso Comercial</h4>
+                        <p class="text-sm text-gray-400">Libre de derechos de autor. Úsalo en proyectos monetizados.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-surface rounded-2xl border border-white/10 p-8 md:p-12">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-display font-bold uppercase mb-4">Lo que dicen los editores</h2>
+                    <div class="flex items-center justify-center gap-1 mb-2">
+                        <i data-lucide="star" class="w-6 h-6 text-accent fill-accent"></i>
+                        <i data-lucide="star" class="w-6 h-6 text-accent fill-accent"></i>
+                        <i data-lucide="star" class="w-6 h-6 text-accent fill-accent"></i>
+                        <i data-lucide="star" class="w-6 h-6 text-accent fill-accent"></i>
+                        <i data-lucide="star" class="w-6 h-6 text-accent fill-accent"></i>
+                    </div>
+                    <p class="text-gray-400">Basado en clientes reales</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="reviews-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- LOGICA SLIDER ---
+        function updateSlider(val) {
+            const percentageToClip = 100 - val;
+            const overlay = document.getElementById('overlay-img');
+            overlay.style.clipPath = `inset(0 ${percentageToClip}% 0 0)`;
+            document.getElementById('slider-handle').style.left = val + "%";
+            document.getElementById('slider-line').style.left = val + "%";
+        }
+        window.addEventListener('DOMContentLoaded', () => updateSlider(50));
+
+        // --- DATA DE PRODUCTOS ---
+        const products = [
+            {
+                id: 1,
+                title: "THE CREATOR BUNDLE",
+                subtitle: "El Pack Definitivo",
+                category: "bundle",
+                reviewTag: "bundle_all",
+                price: "$34.900",
+                oldPrice: "$85.000",
+                image: "https://i.ibb.co/tTmbzjh3/bundlepack.png",
+                mpLink: "https://mpago.la/2txZv49", 
+                features: ["Todo en Uno: LUTs, SFX, Textos", "500+ Assets", "Incluye Social Media Kit", "Guía PDF"],
+                desc: "Si solo vas a comprar un pack, que sea este. La colección completa para llevar tu edición de 0 a 100."
+            },
+            {
+                id: 2,
+                title: "TEXT ANIMATION PRO",
+                subtitle: "Títulos y Lower Thirds",
+                category: "templates",
+                reviewTag: "text_titles",
+                price: "$18.500",
+                oldPrice: "$35.000",
+                image: "https://i.ibb.co/z3zS3BW/TExto.png",
+                mpLink: "https://mpago.la/17mAKGs", 
+                features: ["30 Archivos .MOGRT", "Fuentes Incluidas", "Control de Color y Tamaño", "Animación Automática"],
+                desc: "Textos modernos y limpios. Esenciales para vlogs, documentales y videos corporativos."
+            },
+            {
+                id: 3,
+                title: "SOCIAL MEDIA KIT",
+                subtitle: "Especial para TikTok/Reels/Twitch",
+                category: "templates",
+                reviewTag: "social_media",
+                price: "$19.900",
+                oldPrice: "$38.000",
+                image: "https://i.ibb.co/9mDGjY4V/socialmediakit.png",
+                mpLink: "https://mpago.la/2dpL99b", 
+                features: ["Marcos Verticales", "Emojis Animados", "Pop SFX Pack", "Overlays de Twitch"],
+                desc: "Todo lo necesario para retener la atención en formato vertical. Ideal para creadores de contenido y clippers."
+            },
+            {
+                id: 5,
+                title: "COLORGRADE MASTER LUTS",
+                subtitle: "Para Premiere & Photoshop",
+                category: "luts",
+                reviewTag: "luts",
+                price: "$14.500",
+                oldPrice: "$28.000",
+                image: "https://i.ibb.co/JjB2P2ZW/luts.png",
+                mpLink: "https://mpago.la/1jEXENm", 
+                features: ["50 LUTs (.CUBE & .3DL)", "Compatible con Foto y Video", "Estilos: Cine, Urbano, Travel", "Skin Tone Safe"],
+                desc: "Un pack dual para mantener consistencia visual entre tus videos de YouTube y tus miniaturas en Photoshop."
+            },
+            {
+                id: 6,
+                title: "AUDIO IMPACT LIBRARY",
+                subtitle: "SFX Cinemáticos y Glitch",
+                category: "sfx",
+                reviewTag: "sfx",
+                price: "$12.900",
+                oldPrice: "$24.000",
+                image: "https://i.ibb.co/xtgCXVVR/SFX.png",
+                mpLink: "https://mpago.la/1wZNpgv", 
+                features: ["300+ Archivos WAV", "Risers, Hits, Whooshes", "Sonidos de Interfaz/UI", "Ambientes"],
+                desc: "El diseño sonoro es el 50% del video. Una librería completa para añadir peso y textura a tus cortes."
+            },
+            {
+                id: 7,
+                title: "FLOW TRANSITIONS V2",
+                subtitle: "Movimiento Seamless",
+                category: "presets",
+                reviewTag: "transitions",
+                price: "$16.000",
+                oldPrice: "$30.000",
+                image: "https://i.ibb.co/7LCXWxg/Transiciones.png",
+                mpLink: "https://mpago.la/2gw9q8L", 
+                features: ["50 Presets Drag & Drop", "Zoom, Spin, Slide", "Motion Blur Real", "Sin Plugins"],
+                desc: "Transiciones fluidas que mantienen el ritmo. Perfectas para videos de viaje, vlogs y montajes dinámicos."
+            },
+            {
+                id: 8,
+                title: "INSTANT EDITING FX",
+                subtitle: "Presets Visuales",
+                category: "presets",
+                reviewTag: "visual_fx",
+                price: "$12.500",
+                oldPrice: "$22.000",
+                image: "https://i.ibb.co/xtP39b9S/instantpack.png",
+                mpLink: "https://mpago.la/1nFhtMs", 
+                features: ["Efecto VHS", "Glitch & Distortion", "Camera Shake", "Film Grain Overlay"],
+                desc: "Dale carácter a tu imagen digital. Efectos retro, dañados y cinemáticos listos para arrastrar."
+            }
+        ];
+
+        // --- DATA DE RESEÑAS DINÁMICAS ---
+        const reviewsMap = {
+            bundle_all: [
+                { name: "Lucas G.", role: "Editor Freelance", text: "Compré el Bundle completo y vale cada centavo. Solo con los textos ya recuperé la inversión.", img: "https://randomuser.me/api/portraits/men/85.jpg" },
+                { name: "Martina S.", role: "Content Creator", text: "Tener todo en un solo lugar aceleró mi flujo de trabajo x10. Muy recomendado.", img: "https://randomuser.me/api/portraits/women/65.jpg" },
+                { name: "Javier M.", role: "Filmmaker", text: "La calidad de los assets es de otro nivel. Nada que envidiar a packs de $200 dólares.", img: "https://randomuser.me/api/portraits/men/32.jpg" }
+            ],
+            text_titles: [
+                { name: "Carla T.", role: "Vlogger", text: "Los textos animados son súper limpios y fáciles de personalizar. Me ahorran horas.", img: "https://randomuser.me/api/portraits/women/44.jpg" },
+                { name: "Juan P.", role: "Editor TV", text: "Uso estos MOGRTs en mis informes diarios. Muy profesionales y ligeros.", img: "https://randomuser.me/api/portraits/men/41.jpg" },
+                { name: "Micaela F.", role: "Diseñadora", text: "Me encanta que se puedan cambiar las fuentes sin que se rompa la animación.", img: "https://randomuser.me/api/portraits/women/19.jpg" }
+            ],
+            social_media: [
+                { name: "Mateo R.", role: "Social Media Manager", text: "El Social Media Kit cambió mis Reels. Subí mucho la retención en los primeros 3 segundos.", img: "https://randomuser.me/api/portraits/men/22.jpg" },
+                { name: "Nico B.", role: "Streamer", text: "Uso los overlays de Twitch y la gente siempre pregunta dónde los conseguí. Muy pro.", img: "https://randomuser.me/api/portraits/men/54.jpg" },
+                { name: "Lara V.", role: "TikToker", text: "Los emojis animados le dan mucha vida a mis videos de 'storytime'.", img: "https://randomuser.me/api/portraits/women/61.jpg" }
+            ],
+            luts: [
+                { name: "Sofia L.", role: "YouTuber", text: "Uso los LUTs tanto en mis videos como en las miniaturas. Queda todo súper coherente.", img: "https://randomuser.me/api/portraits/women/28.jpg" },
+                { name: "Diego F.", role: "Colorista Amateur", text: "Me encanta que protejan los tonos de piel. El estilo Teal & Orange es mi favorito.", img: "https://randomuser.me/api/portraits/men/45.jpg" },
+                { name: "Ana P.", role: "Travel Videographer", text: "Probé muchos LUTs, pero estos son los únicos que no rompen la imagen en condiciones de poca luz.", img: "https://randomuser.me/api/portraits/women/90.jpg" }
+            ],
+            sfx: [
+                { name: "Roberto C.", role: "Director de Cortos", text: "Los Risers y Hits le dan ese toque de tensión que le faltaba a mi trailer. Calidad WAV impecable.", img: "https://randomuser.me/api/portraits/men/11.jpg" },
+                { name: "Elena V.", role: "Podcaster", text: "La librería de ambientes es genial para crear inmersión. Muy variada.", img: "https://randomuser.me/api/portraits/women/33.jpg" },
+                { name: "Tomás H.", role: "Editor de Youtube", text: "Los sonidos de Glitch y UI son perfectos para transiciones rápidas. 10/10.", img: "https://randomuser.me/api/portraits/men/76.jpg" }
+            ],
+            transitions: [
+                { name: "Valeria K.", role: "Editora de Moda", text: "Las transiciones son súper suaves (seamless). Nada de cortes bruscos. Me encantan.", img: "https://randomuser.me/api/portraits/women/55.jpg" },
+                { name: "Pedro S.", role: "Vlogger de Viajes", text: "El Zoom y Spin funcionan perfecto para dar dinamismo a mis vlogs de viaje.", img: "https://randomuser.me/api/portraits/men/67.jpg" },
+                { name: "Camila R.", role: "Creadora", text: "Lo mejor es que son drag & drop, no tengo que configurar keyframes.", img: "https://randomuser.me/api/portraits/women/12.jpg" }
+            ],
+            visual_fx: [
+                { name: "Kevin J.", role: "Director de Videoclips", text: "El efecto VHS es el más realista que he probado. Nada de plugins pesados, directo al grano.", img: "https://randomuser.me/api/portraits/men/88.jpg" },
+                { name: "Lucía M.", role: "Artista Visual", text: "Los glitches son muy agresivos, perfectos para mis videos de estilo cyberpunk.", img: "https://randomuser.me/api/portraits/women/92.jpg" },
+                { name: "Pablo D.", role: "Filmmaker", text: "El grano de película le quita ese look digital aburrido a mis tomas con drone.", img: "https://randomuser.me/api/portraits/men/29.jpg" }
+            ]
+        };
+
+        // --- REFERENCIAS DOM ---
+        const homeView = document.getElementById('home-view');
+        const productView = document.getElementById('product-view');
+        const grid = document.getElementById('product-grid-container');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+
+        // --- RENDERIZADO GRID ---
+        function renderProducts(items) {
+            grid.innerHTML = '';
+            items.forEach(product => {
+                const priceHtml = product.oldPrice 
+                    ? `<div class="flex items-center gap-2"><span class="text-sm text-gray-500 line-through">${product.oldPrice}</span><span class="text-xl font-bold text-accent">${product.price}</span></div>`
+                    : `<span class="text-xl font-bold text-white">${product.price}</span>`;
+
+                const item = document.createElement('div');
+                item.className = 'group bg-surface border border-white/10 rounded-xl overflow-hidden hover:border-accent/50 transition-all duration-300 flex flex-col cursor-pointer';
+                item.onclick = () => openProduct(product.id);
+                
+                item.innerHTML = `
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="${product.image}" alt="${product.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100">
+                        ${product.oldPrice ? '<div class="absolute top-3 right-3 discount-badge px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider">Oferta</div>' : ''}
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-4">
+                            <p class="text-xs text-accent font-bold uppercase tracking-widest mb-1">${product.subtitle}</p>
+                            <h3 class="text-2xl font-display font-bold text-white leading-tight">${product.title}</h3>
+                        </div>
+                        <div class="border-t border-white/10 pt-4 flex items-center justify-between mt-auto">
+                            ${priceHtml}
+                            <button class="bg-white hover:bg-accent text-black font-bold py-2 px-6 rounded transition-colors text-sm flex items-center gap-2">
+                                VER PACK <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(item);
+            });
+            lucide.createIcons();
+        }
+
+        // --- SPA LOGIC ---
+        function openProduct(id) {
+            const product = products.find(p => p.id === id);
+            if(!product) return;
+            document.getElementById('p-image').src = product.image;
+            document.getElementById('p-category').innerText = product.category === 'bundle' ? 'PREMIUM BUNDLE' : product.category;
+            document.getElementById('p-title').innerText = product.title;
+            document.getElementById('p-subtitle').innerText = product.subtitle;
+            document.getElementById('p-price').innerText = product.price;
+            document.getElementById('p-btn').href = product.mpLink;
+
+            const oldPriceEl = document.getElementById('p-old-price');
+            const discountEl = document.getElementById('p-discount');
+            if(product.oldPrice) {
+                oldPriceEl.innerText = product.oldPrice;
+                oldPriceEl.classList.remove('hidden');
+                discountEl.classList.remove('hidden');
+            } else {
+                oldPriceEl.classList.add('hidden');
+                discountEl.classList.add('hidden');
+            }
+
+            const featuresList = document.getElementById('p-features');
+            featuresList.innerHTML = product.features.map(f => `<li class="text-sm text-gray-300 flex items-start gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-accent shrink-0"></i> ${f}</li>`).join('');
+
+            // Slider Logic: Show ONLY for product ID 5 (LUTs)
+            const sliderSection = document.getElementById('product-slider-section');
+            if (id === 5) {
+                sliderSection.classList.remove('hidden');
+            } else {
+                sliderSection.classList.add('hidden');
+            }
+
+            // Reviews Logic
+            const reviewKey = product.reviewTag || product.category;
+            const currentReviews = reviewsMap[reviewKey] || reviewsMap.bundle_all;
+            
+            const reviewsContainer = document.getElementById('reviews-container');
+            reviewsContainer.innerHTML = currentReviews.map(r => `
+                <div class="bg-black/20 p-6 rounded-xl border border-white/5">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="${r.img}" class="w-10 h-10 rounded-full border border-accent/20">
+                        <div>
+                            <h5 class="font-bold text-sm text-white">${r.name}</h5>
+                            <p class="text-xs text-accent">${r.role}</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-1 mb-3 text-accent"><i data-lucide="star" class="w-3 h-3 fill-accent"></i><i data-lucide="star" class="w-3 h-3 fill-accent"></i><i data-lucide="star" class="w-3 h-3 fill-accent"></i><i data-lucide="star" class="w-3 h-3 fill-accent"></i><i data-lucide="star" class="w-3 h-3 fill-accent"></i></div>
+                    <p class="text-sm text-gray-400 italic">"${r.text}"</p>
+                </div>
+            `).join('');
+
+            homeView.classList.remove('active');
+            setTimeout(() => {
+                homeView.style.display = 'none';
+                productView.style.display = 'block';
+                setTimeout(() => { productView.classList.add('active'); window.scrollTo(0, 0); }, 10);
+            }, 300);
+            lucide.createIcons();
+        }
+
+        // Función para volver al Home (usada por el logo y el botón volver)
+        function showHome() {
+            productView.classList.remove('active');
+            setTimeout(() => {
+                productView.style.display = 'none';
+                homeView.style.display = 'block';
+                setTimeout(() => { homeView.classList.add('active'); window.scrollTo(0, 0); }, 10);
+            }, 300);
+        }
+
+        // NUEVA Función para navegar a secciones específicas desde el Navbar
+        function goToSection(sectionId) {
+            // Si estamos en la vista de producto, hacemos la transición a home primero
+            if (productView.classList.contains('active') || productView.style.display === 'block') {
+                productView.classList.remove('active');
+                setTimeout(() => {
+                    productView.style.display = 'none';
+                    homeView.style.display = 'block';
+                    setTimeout(() => {
+                        homeView.classList.add('active');
+                        // Scroll al elemento específico
+                        const element = document.getElementById(sectionId);
+                        if (element) element.scrollIntoView({ behavior: 'smooth' });
+                    }, 10);
+                }, 300);
+            } else {
+                // Si ya estamos en home, solo scrolleamos sin saltar al inicio
+                const element = document.getElementById(sectionId);
+                if (element) element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function filterProducts(category) {
+            filterBtns.forEach(btn => {
+                btn.classList.remove('bg-accent', 'text-black', 'border-accent');
+                btn.classList.add('border-white/20');
+            });
+            event.target.classList.add('bg-accent', 'text-black', 'border-accent');
+            event.target.classList.remove('border-white/20');
+
+            const filtered = category === 'all' ? products : products.filter(p => p.category === category || (category === 'bundle' && p.oldPrice));
+            renderProducts(filtered);
+        }
+
+        renderProducts(products);
+    </script>
+</body>
+</html>
