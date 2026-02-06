@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gianvisuals | Packs & Academy</title>
+    <title>Gianvisuals | Edita como un Pro</title>
     <meta name="description" content="Assets premium para editores y cursos de edición profesional.">
 
     <!-- FAVICON (Icono de Rayo) -->
@@ -257,6 +257,114 @@
                             <p class="text-[10px] text-gray-400">Rapipago / PagoFácil</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN NUEVA: PREGUNTAS FRECUENTES (F.A.Q) -->
+        <section class="py-20 bg-background relative overflow-hidden">
+            <!-- Glow decorativo -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/5 rounded-full blur-[100px] pointer-events-none"></div>
+            
+            <div class="max-w-[700px] mx-auto px-6 relative z-10">
+                <h2 class="text-4xl font-display font-bold text-center mb-16 uppercase">F.A.Q</h2>
+                
+                <div class="space-y-4">
+                    <!-- Pregunta 1 -->
+                    <div class="border-b border-white/10 pb-4">
+                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group" onclick="toggleFaq(this)">
+                            <span class="font-medium text-lg">¿Es acceso de por vida?</span>
+                            <i data-lucide="plus" class="w-5 h-5 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
+                        </button>
+                        <div class="hidden pt-4 text-gray-400 text-sm leading-relaxed animate-fade-in">
+                            Sí, una vez realizado el pago, el acceso a los packs y cursos es tuyo para siempre. Incluye futuras actualizaciones gratis.
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 2 -->
+                    <div class="border-b border-white/10 pb-4">
+                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group" onclick="toggleFaq(this)">
+                            <span class="font-medium text-lg">¿Es un solo pago?</span>
+                            <i data-lucide="plus" class="w-5 h-5 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
+                        </button>
+                        <div class="hidden pt-4 text-gray-400 text-sm leading-relaxed animate-fade-in">
+                            Exacto. No hay suscripciones mensuales ni cargos ocultos. Pagas una vez y disfrutas del contenido ilimitadamente.
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 3 -->
+                    <div class="border-b border-white/10 pb-4">
+                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group" onclick="toggleFaq(this)">
+                            <span class="font-medium text-lg">¿El contenido se actualiza con el tiempo?</span>
+                            <i data-lucide="plus" class="w-5 h-5 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
+                        </button>
+                        <div class="hidden pt-4 text-gray-400 text-sm leading-relaxed animate-fade-in">
+                            Sí, especialmente el "Creator Bundle" y los Cursos. Cuando agregamos nuevo material, te llegará una notificación para descargarlo sin costo extra.
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 4 -->
+                    <div class="border-b border-white/10 pb-4">
+                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group" onclick="toggleFaq(this)">
+                            <span class="font-medium text-lg">¿Necesito conocimientos previos en edición?</span>
+                            <i data-lucide="plus" class="w-5 h-5 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
+                        </button>
+                        <div class="hidden pt-4 text-gray-400 text-sm leading-relaxed animate-fade-in">
+                            No necesariamente. Los packs son "Drag & Drop" (arrastrar y soltar) muy fáciles de usar. Los cursos comienzan desde los fundamentos para que aprendas paso a paso.
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 5 -->
+                    <div class="border-b border-white/10 pb-4">
+                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group" onclick="toggleFaq(this)">
+                            <span class="font-medium text-lg">¿El acceso es inmediato?</span>
+                            <i data-lucide="plus" class="w-5 h-5 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
+                        </button>
+                        <div class="hidden pt-4 text-gray-400 text-sm leading-relaxed animate-fade-in">
+                            Inmediato. En cuanto se confirma el pago, el sistema te redirige automáticamente a la descarga o al área de miembros del curso.
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 6 -->
+                    <div class="border-b border-white/10 pb-4">
+                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group" onclick="toggleFaq(this)">
+                            <span class="font-medium text-lg">¿En qué moneda se hace el cargo?</span>
+                            <i data-lucide="plus" class="w-5 h-5 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
+                        </button>
+                        <div class="hidden pt-4 text-gray-400 text-sm leading-relaxed animate-fade-in">
+                            Los precios están mostrados en Pesos Argentinos (ARS). Si compras desde otro país, la plataforma (Hotmart/MercadoPago) convierte el precio a tu moneda local automáticamente.
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 7 -->
+                    <div class="border-b border-white/10 pb-4">
+                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group" onclick="toggleFaq(this)">
+                            <span class="font-medium text-lg">¿Qué hago si no me deja hacer el pago?</span>
+                            <i data-lucide="plus" class="w-5 h-5 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
+                        </button>
+                        <div class="hidden pt-4 text-gray-400 text-sm leading-relaxed animate-fade-in">
+                            A veces los bancos bloquean compras digitales por seguridad. Intenta con otra tarjeta, usa saldo en cuenta, o contáctanos por WhatsApp para habilitar una transferencia directa.
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 8 -->
+                    <div class="border-b border-white/10 pb-4">
+                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group" onclick="toggleFaq(this)">
+                            <span class="font-medium text-lg">¿Me sirve si no quiero ser editor?</span>
+                            <i data-lucide="plus" class="w-5 h-5 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
+                        </button>
+                        <div class="hidden pt-4 text-gray-400 text-sm leading-relaxed animate-fade-in">
+                            ¡Por supuesto! Muchos streamers y creadores usan estos packs para mejorar su propia marca personal sin depender de contratar a un editor externo.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Whatsapp -->
+                <div class="text-center mt-20">
+                    <p class="text-xl font-bold font-display text-white mb-6">Si tienes más preguntas, contactanos por Whatsapp</p>
+                    <a href="https://wa.me/5491100000000" target="_blank" class="bg-[#25D366] hover:bg-white text-black font-bold py-4 px-10 rounded-full inline-flex items-center gap-3 transition-all transform hover:scale-105 shadow-lg shadow-green-900/20">
+                        <i data-lucide="message-circle" class="w-6 h-6"></i> Habla por Whatsapp
+                    </a>
                 </div>
             </div>
         </section>
@@ -668,4 +776,5 @@
     </script>
 </body>
 </html>
+
 
