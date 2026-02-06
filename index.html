@@ -165,7 +165,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Curso 1 -->
                 <div class="group relative rounded-2xl overflow-hidden border border-white/10 bg-surface h-[400px]">
-                    <img src="https://i.ibb.co/qFYSXFg6/Gemini-Generated-Image-jjw7hhjjw7hhjjw7.png" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700">
+                    <img src="https://i.ibb.co/qFYSXFg6/Gemini-Generated-Image-jjw7hhjjw7hhjjw7.png" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-8 w-full">
                         <div class="flex gap-2 mb-3">
@@ -186,7 +186,7 @@
 
                 <!-- Curso 2 -->
                 <div class="group relative rounded-2xl overflow-hidden border border-white/10 bg-surface h-[400px]">
-                    <img src="https://images.unsplash.com/photo-1579109652910-99b9be06aaec?q=80&w=687&auto=format&fit=crop" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700">
+                    <img src="https://images.unsplash.com/photo-1579109652910-99b9be06aaec?q=80&w=687&auto=format&fit=crop" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-8 w-full">
                         <div class="flex gap-2 mb-3">
@@ -317,10 +317,10 @@
                     <p class="text-gray-400 mt-2 max-w-lg mx-auto text-sm">Desliza para ver la diferencia real en footage plano (LOG).</p>
                 </div>
                 <div class="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden border border-white/20 shadow-2xl group cursor-col-resize select-none" id="slider-container">
-                    <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop" class="comparison-image absolute inset-0 w-full h-full object-cover" alt="After Color Grade">
+                    <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop" class="comparison-image absolute inset-0 w-full h-full object-cover" alt="After Color Grade" loading="lazy" decoding="async">
                     <span class="absolute top-4 right-4 bg-black/60 backdrop-blur px-3 py-1 rounded text-xs font-bold border border-white/10 z-10 pointer-events-none">AFTER</span>
                     <div id="overlay-img" class="absolute inset-0 w-full h-full">
-                        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop" class="comparison-image img-before w-full h-full object-cover" alt="Before Color Grade">
+                        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop" class="comparison-image img-before w-full h-full object-cover" alt="Before Color Grade" loading="lazy" decoding="async">
                         <span class="absolute top-4 left-4 bg-black/60 backdrop-blur px-3 py-1 rounded text-xs font-bold border border-white/10 pointer-events-none">BEFORE (LOG)</span>
                     </div>
                     <div class="slider-divider" id="slider-line" style="left: 50%"></div>
@@ -534,7 +534,7 @@
                 
                 item.innerHTML = `
                     <div class="relative h-64 overflow-hidden">
-                        <img src="${product.image}" alt="${product.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100">
+                        <img src="${product.image}" alt="${product.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" loading="lazy" decoding="async">
                         ${product.oldPrice ? '<div class="absolute top-3 right-3 discount-badge px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider">Oferta</div>' : ''}
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
