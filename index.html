@@ -88,7 +88,7 @@
     <!-- Marquee -->
     <div class="bg-accent text-black text-xs font-bold py-2 overflow-hidden whitespace-nowrap border-b border-accent relative z-40">
         <div class="inline-block animate-marquee">
-            <span class="mx-4">🔥 NUEVO CURSO: "VIRAL EDITING" DISPONIBLE</span> • <span class="mx-4">PACKS ACTUALIZADOS 2026</span> • <span class="mx-4">COMPATIBLE CON PREMIERE & DAVINCI</span> • <span class="mx-4">DESCARGA INMEDIATA</span>
+            <span class="mx-4">🔥 NUEVO CURSO: "VIRAL EDITING" DISPONIBLE</span> • <span class="mx-4">PACKS ACTUALIZADOS 2026</span> • <span class="mx-4">OFERTA DE LANZAMIENTO</span> • <span class="mx-4">DESCARGA INMEDIATA</span>
         </div>
     </div>
 
@@ -124,10 +124,10 @@
                 Herramientas profesionales y cursos avanzados para editores de video, streamers y creadores de contenido.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 relative z-10">
-                <a href="#bundles" class="bg-accent text-black px-10 py-4 font-bold font-display text-lg rounded hover:bg-white transition-all transform hover:scale-105 shadow-[0_0_30px_rgba(204,255,0,0.3)] w-full sm:w-auto">
+                <a href="#bundles" onclick="goToSection('bundles'); return false;" class="bg-accent text-black px-10 py-4 font-bold font-display text-lg rounded hover:bg-white transition-all transform hover:scale-105 shadow-[0_0_30px_rgba(204,255,0,0.3)] w-full sm:w-auto cursor-pointer text-center">
                     VER PACKS
                 </a>
-                <a href="#academy" class="bg-surface border border-white/20 text-white px-10 py-4 font-bold font-display text-lg rounded hover:bg-white/10 transition-all w-full sm:w-auto">
+                <a href="#academy" onclick="goToSection('academy'); return false;" class="bg-surface border border-white/20 text-white px-10 py-4 font-bold font-display text-lg rounded hover:bg-white/10 transition-all w-full sm:w-auto cursor-pointer text-center">
                     VER CURSOS
                 </a>
             </div>
@@ -144,7 +144,7 @@
             </div>
             <div class="flex justify-between items-center mt-6">
                 <div>
-                    <h3 class="text-xl font-display font-bold text-white">Showreel 2026</h3>
+                    <h3 class="text-xl font-display font-bold text-white">Showreel 2024</h3>
                     <p class="text-sm text-gray-500">Mira lo que puedes lograr con nuestros assets.</p>
                 </div>
                 <div class="flex items-center gap-2 text-xs text-accent uppercase tracking-widest font-bold">
@@ -153,7 +153,7 @@
             </div>
         </section>
 
-        <!-- SECCIÓN 2: ACADEMY (CURSOS - Link Externo) -->
+        <!-- SECCIÓN 2: ACADEMY (CURSOS) -->
         <section id="academy" class="py-24 px-4 md:px-8 max-w-[1200px] mx-auto border-b border-white/10">
             <div class="flex items-end justify-between mb-12">
                 <div>
@@ -178,7 +178,10 @@
                         <h3 class="text-3xl font-display font-bold text-white mb-2">Edición Viral para Redes</h3>
                         <p class="text-gray-400 text-sm mb-6 line-clamp-2">Aprende a crear Reels y Tiktoks dinámicos que retienen la audiencia. Subtítulos, ritmo y efectos.</p>
                         <div class="flex items-center justify-between border-t border-white/10 pt-4">
-                            <span class="text-2xl font-bold">$29.000</span>
+                            <div class="flex flex-col">
+                                <span class="text-xs text-gray-500 line-through">$60.000</span>
+                                <span class="text-2xl font-bold">$34.900</span>
+                            </div>
                             <!-- Enlace directo a Hotmart/Plataforma externa -->
                             <a href="https://hotmart.com/es" target="_blank" class="bg-white text-black px-6 py-2 rounded font-bold text-sm flex items-center gap-2 hover:bg-accent transition-colors">
                                 INSCRIBIRSE <i data-lucide="external-link" class="w-4 h-4"></i>
@@ -199,7 +202,10 @@
                         <h3 class="text-3xl font-display font-bold text-white mb-2">Master en Premiere Pro</h3>
                         <p class="text-gray-400 text-sm mb-6 line-clamp-2">Domina el flujo de trabajo profesional. Atajos de teclado, proxies, color grading y exportación eficiente.</p>
                         <div class="flex items-center justify-between border-t border-white/10 pt-4">
-                            <span class="text-2xl font-bold">$49.900</span>
+                            <div class="flex flex-col">
+                                <span class="text-xs text-gray-500 line-through">$150.000</span>
+                                <span class="text-2xl font-bold">$89.900</span>
+                            </div>
                             <!-- Enlace directo a Hotmart/Plataforma externa -->
                             <a href="https://hotmart.com/es" target="_blank" class="bg-white text-black px-6 py-2 rounded font-bold text-sm flex items-center gap-2 hover:bg-accent transition-colors">
                                 INSCRIBIRSE <i data-lucide="external-link" class="w-4 h-4"></i>
@@ -220,11 +226,9 @@
                 <div class="flex gap-2 overflow-x-auto no-scrollbar w-full md:w-auto">
                     <button onclick="filterProducts('all')" class="filter-btn active px-4 py-1 rounded text-xs font-bold border border-white/20 hover:border-accent transition-colors whitespace-nowrap">TODO</button>
                     <button onclick="filterProducts('bundle')" class="filter-btn px-4 py-1 rounded text-xs font-bold border border-white/20 hover:border-accent transition-colors whitespace-nowrap">PACKS</button>
-                    <button onclick="filterProducts('sfx')" class="filter-btn px-4 py-1 rounded text-xs font-bold border border-white/20 hover:border-accent transition-colors whitespace-nowrap">AUDIO</button>
-                    <button onclick="filterProducts('luts')" class="filter-btn px-4 py-1 rounded text-xs font-bold border border-white/20 hover:border-accent transition-colors whitespace-nowrap">COLOR</button>
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid-container">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8" id="product-grid-container">
                 <!-- JS Injection -->
             </div>
         </section>
@@ -260,101 +264,100 @@
             </div>
         </section>
 
-        <!-- SECCIÓN NUEVA: PREGUNTAS FRECUENTES (F.A.Q) -->
+        <!-- SECCIÓN: PREGUNTAS FRECUENTES (F.A.Q) -->
         <section class="py-20 bg-background relative overflow-hidden">
-            <!-- Glow decorativo -->
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/5 rounded-full blur-[100px] pointer-events-none"></div>
             
-            <div class="max-w-[700px] mx-auto px-6 relative z-10">
+            <div class="max-w-[800px] mx-auto px-6 relative z-10">
                 <h2 class="text-4xl font-display font-bold text-center mb-16 uppercase">F.A.Q</h2>
-                
                 <div class="space-y-4">
                     <!-- Pregunta 1 -->
                     <div class="border-b border-white/10 pb-4">
-                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group" onclick="toggleFaq(this)">
+                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group py-2" onclick="toggleFaq(this)">
                             <span class="font-medium text-lg">¿Es acceso de por vida?</span>
-                            <i data-lucide="plus" class="w-5 h-5 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
+                            <i data-lucide="plus" class="w-6 h-6 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
                         </button>
-                        <div class="hidden pt-4 text-gray-400 text-sm leading-relaxed animate-fade-in">
-                            Sí, una vez realizado el pago, el acceso a los packs y cursos es tuyo para siempre. Incluye futuras actualizaciones gratis.
-                        </div>
+                        <div class="hidden pt-2 text-gray-400 text-sm leading-relaxed animate-fade-in">Sí, una vez realizado el pago, el acceso a los packs y cursos es tuyo para siempre. Incluye futuras actualizaciones gratis.</div>
                     </div>
-
                     <!-- Pregunta 2 -->
                     <div class="border-b border-white/10 pb-4">
-                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group" onclick="toggleFaq(this)">
+                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group py-2" onclick="toggleFaq(this)">
                             <span class="font-medium text-lg">¿Es un solo pago?</span>
-                            <i data-lucide="plus" class="w-5 h-5 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
+                            <i data-lucide="plus" class="w-6 h-6 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
                         </button>
-                        <div class="hidden pt-4 text-gray-400 text-sm leading-relaxed animate-fade-in">
-                            Exacto. No hay suscripciones mensuales ni cargos ocultos. Pagas una vez y disfrutas del contenido ilimitadamente.
-                        </div>
+                        <div class="hidden pt-2 text-gray-400 text-sm leading-relaxed animate-fade-in">Exacto. No hay suscripciones mensuales ni cargos ocultos. Pagas una vez y disfrutas del contenido ilimitadamente.</div>
                     </div>
-
                     <!-- Pregunta 3 -->
                     <div class="border-b border-white/10 pb-4">
-                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group" onclick="toggleFaq(this)">
+                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group py-2" onclick="toggleFaq(this)">
                             <span class="font-medium text-lg">¿El contenido se actualiza con el tiempo?</span>
-                            <i data-lucide="plus" class="w-5 h-5 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
+                            <i data-lucide="plus" class="w-6 h-6 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
                         </button>
-                        <div class="hidden pt-4 text-gray-400 text-sm leading-relaxed animate-fade-in">
-                            Sí, especialmente el "Creator Bundle" y los Cursos. Cuando agregamos nuevo material, te llegará una notificación para descargarlo sin costo extra.
-                        </div>
+                        <div class="hidden pt-2 text-gray-400 text-sm leading-relaxed animate-fade-in">Sí, especialmente el "Creator Bundle" y los Cursos. Cuando agregamos nuevo material, te llegará una notificación para descargarlo sin costo extra.</div>
                     </div>
-
                     <!-- Pregunta 4 -->
                     <div class="border-b border-white/10 pb-4">
-                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group" onclick="toggleFaq(this)">
+                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group py-2" onclick="toggleFaq(this)">
                             <span class="font-medium text-lg">¿Necesito conocimientos previos en edición?</span>
-                            <i data-lucide="plus" class="w-5 h-5 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
+                            <i data-lucide="plus" class="w-6 h-6 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
                         </button>
-                        <div class="hidden pt-4 text-gray-400 text-sm leading-relaxed animate-fade-in">
-                            No necesariamente. Los packs son "Drag & Drop" (arrastrar y soltar) muy fáciles de usar. Los cursos comienzan desde los fundamentos para que aprendas paso a paso.
-                        </div>
+                        <div class="hidden pt-2 text-gray-400 text-sm leading-relaxed animate-fade-in">No necesariamente. Los packs son "Drag & Drop" (arrastrar y soltar) muy fáciles de usar. Los cursos comienzan desde los fundamentos para que aprendas paso a paso.</div>
                     </div>
-
                     <!-- Pregunta 5 -->
                     <div class="border-b border-white/10 pb-4">
-                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group" onclick="toggleFaq(this)">
+                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group py-2" onclick="toggleFaq(this)">
                             <span class="font-medium text-lg">¿El acceso es inmediato?</span>
-                            <i data-lucide="plus" class="w-5 h-5 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
+                            <i data-lucide="plus" class="w-6 h-6 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
                         </button>
-                        <div class="hidden pt-4 text-gray-400 text-sm leading-relaxed animate-fade-in">
-                            Inmediato. En cuanto se confirma el pago, el sistema te redirige automáticamente a la descarga o al área de miembros del curso.
-                        </div>
+                        <div class="hidden pt-2 text-gray-400 text-sm leading-relaxed animate-fade-in">Inmediato. En cuanto se confirma el pago, el sistema te redirige automáticamente a la descarga o al área de miembros del curso.</div>
                     </div>
-
                     <!-- Pregunta 6 -->
                     <div class="border-b border-white/10 pb-4">
-                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group" onclick="toggleFaq(this)">
+                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group py-2" onclick="toggleFaq(this)">
                             <span class="font-medium text-lg">¿En qué moneda se hace el cargo?</span>
-                            <i data-lucide="plus" class="w-5 h-5 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
+                            <i data-lucide="plus" class="w-6 h-6 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
                         </button>
-                        <div class="hidden pt-4 text-gray-400 text-sm leading-relaxed animate-fade-in">
-                            Los precios están mostrados en Pesos Argentinos (ARS). Si compras desde otro país, la plataforma (Hotmart/MercadoPago) convierte el precio a tu moneda local automáticamente.
-                        </div>
+                        <div class="hidden pt-2 text-gray-400 text-sm leading-relaxed animate-fade-in">Los precios están mostrados en Pesos Argentinos (ARS). Si compras desde otro país, la plataforma (Hotmart/MercadoPago) convierte el precio a tu moneda local automáticamente.</div>
                     </div>
-
                     <!-- Pregunta 7 -->
                     <div class="border-b border-white/10 pb-4">
-                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group" onclick="toggleFaq(this)">
+                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group py-2" onclick="toggleFaq(this)">
                             <span class="font-medium text-lg">¿Qué hago si no me deja hacer el pago?</span>
-                            <i data-lucide="plus" class="w-5 h-5 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
+                            <i data-lucide="plus" class="w-6 h-6 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
                         </button>
-                        <div class="hidden pt-4 text-gray-400 text-sm leading-relaxed animate-fade-in">
-                            A veces los bancos bloquean compras digitales por seguridad. Intenta con otra tarjeta, usa saldo en cuenta, o contáctanos por WhatsApp para habilitar una transferencia directa.
-                        </div>
+                        <div class="hidden pt-2 text-gray-400 text-sm leading-relaxed animate-fade-in">A veces los bancos bloquean compras digitales por seguridad. Intenta con otra tarjeta, usa saldo en cuenta, o contáctanos por WhatsApp para habilitar una transferencia directa.</div>
                     </div>
-
                     <!-- Pregunta 8 -->
                     <div class="border-b border-white/10 pb-4">
-                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group" onclick="toggleFaq(this)">
+                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group py-2" onclick="toggleFaq(this)">
                             <span class="font-medium text-lg">¿Me sirve si no quiero ser editor?</span>
-                            <i data-lucide="plus" class="w-5 h-5 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
+                            <i data-lucide="plus" class="w-6 h-6 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
                         </button>
-                        <div class="hidden pt-4 text-gray-400 text-sm leading-relaxed animate-fade-in">
-                            ¡Por supuesto! Muchos streamers y creadores usan estos packs para mejorar su propia marca personal sin depender de contratar a un editor externo.
-                        </div>
+                        <div class="hidden pt-2 text-gray-400 text-sm leading-relaxed animate-fade-in">¡Por supuesto! Muchos streamers y creadores usan estos packs para mejorar su propia marca personal sin depender de contratar a un editor externo.</div>
+                    </div>
+                     <!-- Pregunta 9 (Academia) -->
+                     <div class="border-b border-white/10 pb-4">
+                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group py-2" onclick="toggleFaq(this)">
+                            <span class="font-medium text-lg">¿Dónde se alojan los cursos?</span>
+                            <i data-lucide="plus" class="w-6 h-6 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
+                        </button>
+                        <div class="hidden pt-2 text-gray-400 text-sm leading-relaxed animate-fade-in">Los cursos están alojados en Hotmart, la plataforma educativa líder en Latinoamérica, lo que garantiza una experiencia de reproducción fluida y segura.</div>
+                    </div>
+                    <!-- Pregunta 10 (Academia) -->
+                    <div class="border-b border-white/10 pb-4">
+                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group py-2" onclick="toggleFaq(this)">
+                            <span class="font-medium text-lg">¿Entregan certificado?</span>
+                            <i data-lucide="plus" class="w-6 h-6 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
+                        </button>
+                        <div class="hidden pt-2 text-gray-400 text-sm leading-relaxed animate-fade-in">Sí, al completar el 100% de las clases, recibirás un certificado digital de finalización a tu nombre para agregar a tu portafolio o LinkedIn.</div>
+                    </div>
+                    <!-- Pregunta 11 (Academia) -->
+                    <div class="border-b border-white/10 pb-4">
+                        <button class="w-full flex justify-between items-center text-left hover:text-accent transition-colors group py-2" onclick="toggleFaq(this)">
+                            <span class="font-medium text-lg">¿Tengo soporte si tengo dudas?</span>
+                            <i data-lucide="plus" class="w-6 h-6 text-gray-500 group-hover:text-accent transition-transform duration-300"></i>
+                        </button>
+                        <div class="hidden pt-2 text-gray-400 text-sm leading-relaxed animate-fade-in">Sí, todos los alumnos tienen acceso a soporte directo para resolver dudas técnicas sobre las lecciones o los proyectos.</div>
                     </div>
                 </div>
 
@@ -373,11 +376,11 @@
             <h2 class="text-2xl font-display font-bold text-white mb-2 tracking-tighter">GIANVISUALS</h2>
             <p class="text-gray-500 text-xs mb-8">Elevando el estándar de la edición en Latam.</p>
             <div class="flex justify-center gap-6 text-xs text-gray-400 mb-8">
-                <!-- MODIFICA TUS ENLACES AQUÍ -->
                 <a href="https://instagram.com/GianVisuals" target="_blank" class="hover:text-white">Instagram</a>
-                <a href="https://tiktok.com/@gianvisuals" target="_blank" class="hover:text-white">TikTok</a>
+                <a href="https://youtube.com/c/TU_CANAL" target="_blank" class="hover:text-white">YouTube</a>
+                <a href="mailto:business.giandrix@gmail.com" class="hover:text-white">Soporte</a>
             </div>
-            <p class="text-[10px] text-gray-600">&copy; 2026 Gianvisuals. Todos los derechos reservados.</p>
+            <p class="text-[10px] text-gray-600">&copy; 2024 Gianvisuals. Todos los derechos reservados.</p>
         </footer>
     </div>
 
@@ -484,18 +487,36 @@
         // --- LOGICA DE FAQ ACORDEÓN ---
         function toggleFaq(btn) {
             const content = btn.nextElementSibling;
-            // Lucide replaces <i> with <svg>, so we query for svg first, falling back to i if script hasn't run (unlikely but safe)
-            const icon = btn.querySelector('svg') || btn.querySelector('i'); 
+            // Busca el icono dentro del botón. Lucide transforma <i> en <svg>
+            // Buscamos ambos por seguridad.
+            let icon = btn.querySelector('[data-lucide]'); 
+            if (!icon) icon = btn.querySelector('svg');
+            if (!icon) icon = btn.querySelector('i');
             
-            if (!icon) return; // Guard clause
+            // Si por alguna razón no encuentra el icono, salimos para evitar el error
+            if (!icon) {
+                console.warn("Icono no encontrado en el botón de FAQ");
+                // Aún así intentamos abrir el contenido
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    content.classList.add('block');
+                } else {
+                    content.classList.add('hidden');
+                    content.classList.remove('block');
+                }
+                return;
+            }
 
-            // Toggle visual del contenido
+            // Toggle visual del contenido y rotación
             if (content.classList.contains('hidden')) {
                 content.classList.remove('hidden');
+                content.classList.add('block');
                 icon.style.transform = 'rotate(45deg)'; 
                 icon.style.color = '#CCFF00'; 
+                icon.style.transition = 'transform 0.3s ease'; // Asegurar transición
             } else {
                 content.classList.add('hidden');
+                content.classList.remove('block');
                 icon.style.transform = 'rotate(0deg)';
                 icon.style.color = ''; 
             }
@@ -521,23 +542,10 @@
                 reviewTag: "bundle_all",
                 price: "$34.900",
                 oldPrice: "$85.000",
-                image: "https://i.ibb.co/vxHkTrvS/bundlepack.jpg",
+                image: "https://i.ibb.co/Pv8JWzQZ/Bundle-Pack-X3.jpg",
                 mpLink: "https://mpago.la/2txZv49", 
                 features: ["Todo en Uno: LUTs, SFX, Textos", "500+ Assets", "Incluye Social Media Kit", "Guía PDF"],
                 desc: "Si solo vas a comprar un pack, que sea este. La colección completa para llevar tu edición de 0 a 100."
-            },
-            {
-                id: 2,
-                title: "TEXT ANIMATION PRO",
-                subtitle: "Títulos y Lower Thirds",
-                category: "templates",
-                reviewTag: "text_titles",
-                price: "$18.500",
-                oldPrice: "$35.000",
-                image: "https://i.ibb.co/PzM8BMNJ/textanimation.jpg",
-                mpLink: "https://mpago.la/17mAKGs", 
-                features: ["30 Archivos .MOGRT", "Fuentes Incluidas", "Control de Color y Tamaño", "Animación Automática"],
-                desc: "Textos modernos y limpios. Esenciales para vlogs, documentales y videos corporativos."
             },
             {
                 id: 3,
@@ -547,7 +555,7 @@
                 reviewTag: "social_media",
                 price: "$19.900",
                 oldPrice: "$38.000",
-                image: "https://i.ibb.co/j9m95w0V/socialmedia.jpg",
+                image: "https://i.ibb.co/9mDGjY4V/socialmediakit.png",
                 mpLink: "https://mpago.la/2dpL99b", 
                 features: ["Marcos Verticales", "Emojis Animados", "Pop SFX Pack", "Overlays de Twitch"],
                 desc: "Todo lo necesario para retener la atención en formato vertical. Ideal para creadores de contenido y clippers."
@@ -560,7 +568,7 @@
                 reviewTag: "luts",
                 price: "$14.500",
                 oldPrice: "$28.000",
-                image: "https://i.ibb.co/Lz55NX2b/luts.jpg",
+                image: "https://i.ibb.co/JjB2P2ZW/luts.png",
                 mpLink: "https://mpago.la/1jEXENm", 
                 features: ["50 LUTs (.CUBE & .3DL)", "Compatible con Foto y Video", "Estilos: Cine, Urbano, Travel", "Skin Tone Safe"],
                 desc: "Un pack dual para mantener consistencia visual entre tus videos de YouTube y tus miniaturas en Photoshop."
@@ -573,36 +581,10 @@
                 reviewTag: "sfx",
                 price: "$12.900",
                 oldPrice: "$24.000",
-                image: "https://i.ibb.co/prLK8DQx/sfx.jpg",
+                image: "https://i.ibb.co/xtgCXVVR/SFX.png",
                 mpLink: "https://mpago.la/1wZNpgv", 
                 features: ["300+ Archivos WAV", "Risers, Hits, Whooshes", "Sonidos de Interfaz/UI", "Ambientes"],
                 desc: "El diseño sonoro es el 50% del video. Una librería completa para añadir peso y textura a tus cortes."
-            },
-            {
-                id: 7,
-                title: "FLOW TRANSITIONS V2",
-                subtitle: "Movimiento Seamless",
-                category: "presets",
-                reviewTag: "transitions",
-                price: "$16.000",
-                oldPrice: "$30.000",
-                image: "https://i.ibb.co/PvgRfgwD/transiciones.jpg",
-                mpLink: "https://mpago.la/2gw9q8L", 
-                features: ["50 Presets Drag & Drop", "Zoom, Spin, Slide", "Motion Blur Real", "Sin Plugins"],
-                desc: "Transiciones fluidas que mantienen el ritmo. Perfectas para videos de viaje, vlogs y montajes dinámicos."
-            },
-            {
-                id: 8,
-                title: "INSTANT EDITING FX",
-                subtitle: "Presets Visuales",
-                category: "presets",
-                reviewTag: "visual_fx",
-                price: "$12.500",
-                oldPrice: "$22.000",
-                image: "https://i.ibb.co/svTR3mWY/presets.jpg",
-                mpLink: "https://mpago.la/1nFhtMs", 
-                features: ["Efecto VHS", "Glitch & Distortion", "Camera Shake", "Film Grain Overlay"],
-                desc: "Dale carácter a tu imagen digital. Efectos retro, dañados y cinemáticos listos para arrastrar."
             }
         ];
 
@@ -612,11 +594,6 @@
                 { name: "Lucas G.", role: "Editor Freelance", text: "Compré el Bundle completo y vale cada centavo. Solo con los textos ya recuperé la inversión.", img: "https://randomuser.me/api/portraits/men/85.jpg" },
                 { name: "Martina S.", role: "Content Creator", text: "Tener todo en un solo lugar aceleró mi flujo de trabajo x10. Muy recomendado.", img: "https://randomuser.me/api/portraits/women/65.jpg" },
                 { name: "Javier M.", role: "Filmmaker", text: "La calidad de los assets es de otro nivel. Nada que envidiar a packs de $200 dólares.", img: "https://randomuser.me/api/portraits/men/32.jpg" }
-            ],
-            text_titles: [
-                { name: "Carla T.", role: "Vlogger", text: "Los textos animados son súper limpios y fáciles de personalizar. Me ahorran horas.", img: "https://randomuser.me/api/portraits/women/44.jpg" },
-                { name: "Juan P.", role: "Editor TV", text: "Uso estos MOGRTs en mis informes diarios. Muy profesionales y ligeros.", img: "https://randomuser.me/api/portraits/men/41.jpg" },
-                { name: "Micaela F.", role: "Diseñadora", text: "Me encanta que se puedan cambiar las fuentes sin que se rompa la animación.", img: "https://randomuser.me/api/portraits/women/19.jpg" }
             ],
             social_media: [
                 { name: "Mateo R.", role: "Social Media Manager", text: "El Social Media Kit cambió mis Reels. Subí mucho la retención en los primeros 3 segundos.", img: "https://randomuser.me/api/portraits/men/22.jpg" },
@@ -632,16 +609,6 @@
                 { name: "Roberto C.", role: "Director de Cortos", text: "Los Risers y Hits le dan ese toque de tensión que le faltaba a mi trailer. Calidad WAV impecable.", img: "https://randomuser.me/api/portraits/men/11.jpg" },
                 { name: "Elena V.", role: "Podcaster", text: "La librería de ambientes es genial para crear inmersión. Muy variada.", img: "https://randomuser.me/api/portraits/women/33.jpg" },
                 { name: "Tomás H.", role: "Editor de Youtube", text: "Los sonidos de Glitch y UI son perfectos para transiciones rápidas. 10/10.", img: "https://randomuser.me/api/portraits/men/76.jpg" }
-            ],
-            transitions: [
-                { name: "Valeria K.", role: "Editora de Moda", text: "Las transiciones son súper suaves (seamless). Nada de cortes bruscos. Me encantan.", img: "https://randomuser.me/api/portraits/women/55.jpg" },
-                { name: "Pedro S.", role: "Vlogger de Viajes", text: "El Zoom y Spin funcionan perfecto para dar dinamismo a mis vlogs de viaje.", img: "https://randomuser.me/api/portraits/men/67.jpg" },
-                { name: "Camila R.", role: "Creadora", text: "Lo mejor es que son drag & drop, no tengo que configurar keyframes.", img: "https://randomuser.me/api/portraits/women/12.jpg" }
-            ],
-            visual_fx: [
-                { name: "Kevin J.", role: "Director de Videoclips", text: "El efecto VHS es el más realista que he probado. Nada de plugins pesados, directo al grano.", img: "https://randomuser.me/api/portraits/men/88.jpg" },
-                { name: "Lucía M.", role: "Artista Visual", text: "Los glitches son muy agresivos, perfectos para mis videos de estilo cyberpunk.", img: "https://randomuser.me/api/portraits/women/92.jpg" },
-                { name: "Pablo D.", role: "Filmmaker", text: "El grano de película le quita ese look digital aburrido a mis tomas con drone.", img: "https://randomuser.me/api/portraits/men/29.jpg" }
             ]
         };
 
@@ -795,5 +762,3 @@
     </script>
 </body>
 </html>
-
-
