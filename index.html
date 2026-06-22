@@ -17,8 +17,8 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Lucide Icons (Versión fija para evitar rupturas) -->
+    <script src="https://unpkg.com/lucide@0.344.0"></script>
 
     <script>
         tailwind.config = {
@@ -177,7 +177,7 @@
                 <!-- Perfil 2 -->
                 <div class="bg-surface border border-white/5 hover:border-accent/50 transition-colors rounded-2xl p-6 group">
                     <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i data-lucide="twitch" class="w-6 h-6 text-accent"></i>
+                        <i data-lucide="radio" class="w-6 h-6 text-accent"></i>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2 uppercase tracking-wide">Streamers</h3>
                     <p class="text-sm text-gray-400 leading-relaxed">Edita y sube tus propios clips virales sin depender de terceros.</p>
@@ -185,7 +185,7 @@
                 <!-- Perfil 3 -->
                 <div class="bg-surface border border-white/5 hover:border-accent/50 transition-colors rounded-2xl p-6 group">
                     <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i data-lucide="youtube" class="w-6 h-6 text-accent"></i>
+                        <i data-lucide="clapperboard" class="w-6 h-6 text-accent"></i>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2 uppercase tracking-wide">Creadores de Contenido</h3>
                     <p class="text-sm text-gray-400 leading-relaxed">Aumenta la retención de tu audiencia y profesionaliza tu canal.</p>
@@ -858,7 +858,7 @@
             event.target.classList.add('bg-accent', 'text-black', 'border-accent');
             event.target.classList.remove('border-white/20');
 
-            const filtered = category === 'all' ? products : products.filter(p => p.category === category);
+            const filtered = category === 'all' ? products : products.filter(p => p.category === category || (category === 'bundle' && p.oldPrice));
             renderProducts(filtered);
         }
 
