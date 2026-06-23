@@ -391,8 +391,8 @@
                     Estamos preparando cursos prácticos, sin relleno, diseñados para llevar tu edición de nivel intermedio a avanzado. Sumate a la lista de espera para acceder antes que nadie.
                 </p>
                 
-                <form class="flex flex-col sm:flex-row gap-3 justify-center mb-4" onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte!');">
-                    <input type="email" placeholder="tu@email.com" required class="w-full sm:w-auto px-6 py-4 rounded-lg bg-surface border border-white/10 text-white focus:outline-none focus:border-accent transition-colors">
+                <form id="newsletter-form" action="https://formspree.io/f/mqevawpz" method="POST" class="flex flex-col sm:flex-row gap-3 justify-center mb-4">
+                    <input type="email" name="email" placeholder="tu@email.com" required class="w-full sm:w-auto px-6 py-4 rounded-lg bg-surface border border-white/10 text-white focus:outline-none focus:border-accent transition-colors">
                     <button type="submit" class="w-full sm:w-auto px-8 py-4 bg-accent text-black font-bold uppercase tracking-wide rounded-lg hover:bg-white transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(204,255,0,0.2)]">
                         NOTIFICARME
                     </button>
@@ -858,11 +858,51 @@
             event.target.classList.add('bg-accent', 'text-black', 'border-accent');
             event.target.classList.remove('border-white/20');
 
-            const filtered = category === 'all' ? products : products.filter(p => p.category === category || (category === 'bundle' && p.oldPrice));
+            const filtered = category === 'all' ? products : products.filter(p => p.category === category);
             renderProducts(filtered);
         }
 
         renderProducts(products);
+
+        // --- LÓGICA FORMSPREE (ENVÍO EN SEGUNDO PLANO) ---
+        const newsletterForm = document.getElementById('newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', async function(event) {
+                event.preventDefault(); // Evita la redirección a la página de Formspree
+                
+                const form = event.target;
+                const data = new FormData(form);
+                const button = form.querySelector('button[type="submit"]');
+                const originalBtnText = button.innerText;
+                
+                // Cambia el texto del botón mientras envía para mejor UX
+                button.innerText = 'ENVIANDO...';
+                button.disabled = true;
+
+                try {
+                    const response = await fetch(form.action, {
+                        method: form.method,
+                        body: data,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        alert('¡Gracias por suscribirte! Te avisaremos pronto.');
+                        form.reset(); // Limpia el email ingresado
+                    } else {
+                        alert('Hubo un problema al suscribirte. Inténtalo de nuevo.');
+                    }
+                } catch (error) {
+                    alert('Error de conexión. Inténtalo más tarde.');
+                } finally {
+                    // Restaura el botón
+                    button.innerText = originalBtnText;
+                    button.disabled = false;
+                }
+            });
+        }
     </script>
 </body>
 </html>
